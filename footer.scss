@@ -1,0 +1,16 @@
+$background_color: #f4f9fd;
+$background_warna: #86a9d1;
+$warna: #a3c2e2;
+$color: #333;
+$darker_shadow: #4e6379;
+$shadowa-color: rgba(0, 0, 0, 0.1);
+
+footer {
+    background-color: $background_warna;
+    color: $background_color;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

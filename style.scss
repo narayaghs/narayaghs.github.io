@@ -1,0 +1,166 @@
+$background_color: #f4f9fd;
+$background_warna: #86a9d1;
+$warna: #a3c2e2;
+$color: #333;
+$darker_shadow: #4e6379;
+$shadowa-color: rgba(0, 0, 0, 0.1);
+
+@use 'nav.scss';
+@use 'footer.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: $background_color;
+    color: $color;
+    line-height: 1.6;
+}
+
+header {
+    background-color: $background_warna;
+    color: $background_color;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 3px solid $background_color; 
+    transition: transform 0.3s ease; 
+}
+
+.profile-image:hover {
+    transform: scale(1.1); 
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+        padding: 12px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .content h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 1em;
+    }
+
+    .content h2 {
+        font-size: 1.6em;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: $background_color;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px $shadowa-color;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid $background_color;
+    border-radius: 5px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: $background_warna;
+}
+
+button {
+    background-color: $background_warna;
+    color: $background_color;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: $warna;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: $background_warna;
+    color: $background_color;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: $background_warna;
+}
